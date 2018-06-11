@@ -8,7 +8,7 @@ function bubbleSort(){
     for(let i = 0; i < arr.length; i++){
 
       if(typeof(arr[i]) === "object") {
-        if(fn(arr[i], arr[i+1])) {
+        if(fn.call(arr[i], arr[i+1])) {
           const temp = arr[i];
           arr[i] = arr[i+1];
           arr[i+1] = temp;
